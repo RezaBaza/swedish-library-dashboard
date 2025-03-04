@@ -1,62 +1,17 @@
-# Swedish Library Data Analysis Dashboard
+# Swedish Library Dashboard
 
-An interactive dashboard for analyzing Swedish library loan data from 2000 to 2012, featuring a hybrid approach combining direct data analysis and Retrieval Augmented Generation (RAG).
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://rezabaza-swedish-library-dashboard.streamlit.app/)
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io/cloud)
+An interactive dashboard for exploring Swedish library loan data from 2000-2012, featuring a hybrid question-answering system.
 
 ## Features
 
-### 1. Chatbot Interface
-Ask natural language questions about the data and get accurate answers:
-- "Which region had the highest number of loans in 2012?"
-- "How many total loans were there in Täby for 2008?"
-- "What was the trend in library loans over the years?"
-- "How did Stockholm's loans change from 2000 to 2012?"
+- **Interactive Chat Interface**: Ask questions about Swedish library data in natural language
+- **Data Explorer**: Filter and browse the raw data with customizable filters
+- **Interactive Dashboards**: Visualize trends, comparisons, and statistics
+- **Hybrid QA System**: Combines direct data analysis with RAG (Retrieval Augmented Generation)
 
-### 2. Data Explorer
-Browse and filter the raw data by:
-- Region
-- Year
-- Media Type
-
-View summary statistics and download filtered data as CSV.
-
-### 3. Interactive Dashboards
-Visualize the data with interactive charts:
-- **Loans by Region**: Compare loan volumes across different regions
-- **Loans vs Population**: Analyze the relationship between population size and loan volumes
-- **Trends Over Time**: Track changes in loan patterns over the years
-
-## Screenshots
-
-![Chatbot Interface](https://via.placeholder.com/800x400?text=Chatbot+Interface)
-![Data Explorer](https://via.placeholder.com/800x400?text=Data+Explorer)
-![Interactive Dashboard](https://via.placeholder.com/800x400?text=Interactive+Dashboard)
-
-## Technology Stack
-
-- **Streamlit**: Web application framework
-- **Pandas**: Data manipulation and analysis
-- **Plotly**: Interactive visualizations
-- **Sentence Transformers**: Vector embeddings for semantic search
-- **ChromaDB**: Vector database for storing embeddings
-- **Hugging Face Transformers**: Language models for question answering
-
-## How It Works
-
-The application uses a hybrid approach to answer questions:
-
-1. **Direct Data Analysis**: For specific, structured questions about loans, regions, and years, the system performs direct data analysis using pandas.
-
-2. **Retrieval Augmented Generation (RAG)**: For more contextual questions, the system uses a RAG approach that:
-   - Retrieves relevant information from a vector database
-   - Generates natural language answers based on the retrieved context
-
-## Data Source
-
-The dataset includes library loan statistics from Swedish municipalities from 2000 to 2012, covering different media types and including population data for per-capita analysis.
-
-## Installation and Setup
+## Installation
 
 1. Clone the repository:
 ```bash
@@ -69,19 +24,27 @@ cd swedish-library-dashboard
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file with your Hugging Face API key:
-```
-HUGGINGFACE_API_KEY=your_api_key_here
-```
+3. Set up your Hugging Face API key:
+   - Create a `.env` file in the root directory
+   - Add your API key: `HUGGINGFACE_API_KEY=your_api_key_here`
 
-4. Run the application:
+## Usage
+
+Run the Streamlit app:
 ```bash
 streamlit run streamlit_app.py
 ```
 
 ## Deployment
 
-For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
+This app can be deployed to Streamlit Cloud. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+## Data Source
+
+The data includes library loan statistics from Swedish municipalities from 2000 to 2012, including:
+- Loan counts by region and year
+- Population data for per-capita analysis
+- Media type breakdowns
 
 ## Contributing
 
@@ -93,4 +56,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-[Reza Bazargan](https://github.com/RezaBaza) - Stockholm, Sweden 
+Created by [Reza Bazargan](https://github.com/RezaBaza)
+
+## Screenshots
+
+![Chat Interface](screenshots/chat_interface.png)
+![Data Explorer](screenshots/data_explorer.png)
+![Dashboard](screenshots/dashboard.png)
+
+*Note: Replace the screenshot placeholders with actual screenshots of your application.* 
