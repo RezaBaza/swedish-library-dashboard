@@ -1,4 +1,21 @@
-streamlit
-pandas
-plotly
-numpy 
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+transformers>=4.35.0
+sentence-transformers>=2.2.2
+chromadb>=0.4.18
+python-dotenv>=1.0.0
+tqdm>=4.66.1
+requests>=2.31.0
+plotly>=5.18.0
+torch>=2.1.0
+tensorflow>=2.14.0
+
+# RAG dependencies
+torchvision>=0.17.0
+langchain>=0.1.0
+ctransformers>=0.2.27
+
+# Model acceleration
+accelerate>=0.27.0
+bitsandbytes>=0.41.0 
