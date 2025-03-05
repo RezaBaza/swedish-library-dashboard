@@ -44,7 +44,7 @@ except Exception as e:
 
 # Set page config
 st.set_page_config(
-    page_title="Municipality Library Data Analysis, Sweden",
+    page_title="LibraryLoan AI: Municipal Insights",
     page_icon="📚",
     layout="wide"
 )
@@ -87,7 +87,7 @@ if "qa_system" not in st.session_state:
         st.error(f"Error initializing QA system: {str(e)}")
 
 # Set the title of the app
-st.title("Swedish Library Data Analysis")
+st.title("LibraryLoan AI: Municipal Insights")
 
 # Create sidebar for navigation
 st.sidebar.title("Navigation")
