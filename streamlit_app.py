@@ -44,7 +44,7 @@ except Exception as e:
 
 # Set page config
 st.set_page_config(
-    page_title="Swedish Library Data Analysis",
+    page_title="Municipality Library Data Analysis, Sweden",
     page_icon="📚",
     layout="wide"
 )
@@ -245,7 +245,7 @@ elif page == "Dashboards":
         selected_regions = st.sidebar.multiselect(
             "Select Regions",
             regions,
-            default=regions[:5]  # Default to first 5 regions
+            default=["Stockholm", "Malmö", "Göteborg", "Lund", "Uppsala", "Örebro", "Linköping"]  # Specific default regions
         )
         
         # Filter data based on selections
@@ -388,7 +388,7 @@ st.markdown("### About this app")
 st.markdown("""
 This dashboard provides analysis of Swedish library loan data from 2000-2012. 
 It combines direct data analysis with a question-answering system to help you explore the data.
-Data source: Swedish Library Association.
+Data source: [SCB](https://www.statistikdatabasen.scb.se/pxweb/sv/ssd/).
 """)
 
 # Add version info
